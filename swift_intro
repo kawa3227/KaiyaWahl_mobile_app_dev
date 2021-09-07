@@ -1,0 +1,99 @@
+var message : String
+message = "Hello World"
+ 
+let classMax : Int = 20
+
+print("Hello there " + message)
+print("new \(message)") //prints as a whole string not parts
+//this is a comment
+/*
+ this is a multi line comment
+ */
+
+//type inference can infer the type when given an intial value
+let a = 42
+let b = 0.0123
+let c = Double(a) + b //convert types
+
+//tuples
+let violet = ("#EE82EE", 238,130,238)
+print(violet.0) //to get 0 index in array
+let (hex,red,green,blue) = violet
+print("violet is \(hex)")
+
+//increment += or -=  example a+=2 is the same as a = a+2
+
+//conditionals
+
+let young = "youre young"
+let notyoung = "youre not young"
+let age = 21
+if age < 21{
+    print(young)
+}
+else{
+    print(notyoung)
+}
+//different format for conditional
+age < 21 ? young : notyoung
+
+//switch statement
+//is exhasutive all ranges need to be included use default
+
+/*
+ full range a...b
+ half open range ..< (up to thru less than)
+ one sided ...b (up to b)
+ one sided a... (more than a)
+ */
+switch age{
+    case 0...5:print("toddler")
+    case 6...21: print("school")
+    case 22...55: print("adult")
+    default: print("idk")
+}
+
+/*
+ for and while loops
+ 
+ for in loops define variable and range
+ */
+
+for count in 0...age{
+    print("\(count)")
+}
+
+//functions
+
+func sayHi(){
+    print("HI")
+}
+sayHi()
+
+func sayHello(first: String, last : String){
+    print("HI \(first)  \(last)")
+}
+sayHello(first: "Kaiya", last: "Wahl")
+
+func sayWhat(firstName first:String, lastName last:String){
+    print("what \(first) \(last)?")
+}
+sayWhat(firstName: "Kaiya", lastName: "Wahl")
+//to get function to return variables
+func sayWho(firstName: String, lastName:String )-> String{
+    return "who " + firstName + " " + lastName
+}
+let msdg2 = sayWho(firstName: "amy", lastName: "adams")
+//optional values
+var score: Int?
+//print(score)
+score = 80
+//test if it is nil to force unwrap optional value
+if score != nil{
+    print(score!)
+}
+
+if let currentScore = score{ //if score does not equal nil make = to currentScore
+    print(currentScore)
+}
+
