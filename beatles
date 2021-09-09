@@ -1,0 +1,49 @@
+//
+//  ViewController.swift
+//  beatles
+//
+//  Created by Kaiya Renee Wahl on 9/9/21.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+    @IBOutlet weak var fontsizelabel: UILabel!
+    
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var BeatlesImage: UIImageView!
+    @IBAction func changeinfo(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            titleLabel.text = "Young Beatles"
+            BeatlesImage.image = UIImage(named: "beatles1")
+        }
+        else if sender.selectedSegmentIndex == 1 {
+            titleLabel.text = "Older Beatles"
+            BeatlesImage.image = UIImage(named: "beatles2")
+        }
+    }
+    @IBAction func updateFont(_ sender: UISwitch) {
+        if sender.isOn {
+            //captial
+            titleLabel.text = titleLabel.text?.uppercased()
+        }
+        else{
+            //lowercase
+            titleLabel.text = titleLabel.text?.lowercased()
+        }
+    }
+    @IBAction func fontSize(_ sender: UISlider) {
+        let fontSize = sender.value //only usable in method
+        fontsizelabel.text = String(format: "%.0f", fontSize)
+        let fontSizeCGFloat = CGFloat(fontSize)
+        titleLabel.font = UIFont.systemFont(ofSize: fontSizeCGFloat)
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+
+}
+
