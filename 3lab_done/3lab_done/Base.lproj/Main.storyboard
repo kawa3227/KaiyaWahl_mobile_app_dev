@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_lab_done" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indoor Plants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIR-VE-IHA">
+                                <rect key="frame" x="157" y="121.99999999999999" width="100" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="oeC-qO-RyH">
+                                <rect key="frame" x="18.333333333333343" y="192" width="377.66666666666663" height="568.66666666666663"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plants" translatesAutoresizingMaskIntoConstraints="NO" id="Xgk-aR-Sed">
+                                        <rect key="frame" x="28.666666666666657" y="0.0" width="320" height="319.66666666666669"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="d33-OK-DLr">
+                                        <rect key="frame" x="0.0" y="374.66666666666663" width="377.66666666666669" height="194"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="xEI-4l-udp">
+                                                <rect key="frame" x="30" y="0.0" width="317.33333333333331" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Change Plants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5D-GA-IBN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="110.33333333333333" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="VP5-7W-wRT">
+                                                        <rect key="frame" x="134.33333333333331" y="0.0" width="183" height="32"/>
+                                                        <segments>
+                                                            <segment title="Snake Plant"/>
+                                                            <segment title="Aloe Vera"/>
+                                                        </segments>
+                                                        <connections>
+                                                            <action selector="changeInfo:" destination="BYZ-38-t0r" eventType="valueChanged" id="K5k-YR-tUS"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                </subviews>
+                                                <variation key="heightClass=compact-widthClass=compact" spacing="10"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="101" translatesAutoresizingMaskIntoConstraints="NO" id="JT3-mj-03i">
+                                                <rect key="frame" x="62.000000000000014" y="82" width="253.33333333333337" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Capitalization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZY6-sN-atp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Capitalize" translatesAutoresizingMaskIntoConstraints="NO" id="GiE-Ol-fwi">
+                                                        <rect key="frame" x="204.33333333333337" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="updateFont:" destination="BYZ-38-t0r" eventType="valueChanged" id="kA6-tG-CMB"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                                <variation key="heightClass=compact-widthClass=compact" spacing="25"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="aSa-p3-lUs">
+                                                <rect key="frame" x="0.0" y="164" width="377.66666666666669" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BN7-Yf-hbv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="17.666666666666668" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="9" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="Iud-iv-swO">
+                                                        <rect key="frame" x="65.666666666666686" y="0.0" width="314" height="31"/>
+                                                        <connections>
+                                                            <action selector="FontSize:" destination="BYZ-38-t0r" eventType="valueChanged" id="lVd-kF-Jez"/>
+                                                        </connections>
+                                                    </slider>
+                                                </subviews>
+                                                <variation key="heightClass=compact-widthClass=compact" spacing="10"/>
+                                            </stackView>
+                                        </subviews>
+                                        <variation key="heightClass=compact-widthClass=compact" spacing="40"/>
+                                        <variation key="heightClass=regular-widthClass=compact" alignment="center"/>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.84906572389588131" green="1" blue="0.83409773313135427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oeC-qO-RyH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fd8-RR-vNG"/>
+                            <constraint firstItem="wIR-VE-IHA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="Xna-b3-zxo">
+                                <variation key="heightClass=compact-widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="oeC-qO-RyH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="asj-Ga-KWc"/>
+                            <constraint firstItem="wIR-VE-IHA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cuo-tW-Q3U">
+                                <variation key="heightClass=compact-widthClass=compact" constant="90"/>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d33-OK-DLr" secondAttribute="bottom" constant="101.5" id="d6m-1b-JFH"/>
+                            <constraint firstItem="oeC-qO-RyH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="192" id="ky6-o2-FQ2">
+                                <variation key="heightClass=compact-widthClass=compact" constant="10"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="asj-Ga-KWc"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="oeC-qO-RyH"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="asj-Ga-KWc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="capitalSwitch" destination="GiE-Ol-fwi" id="66C-rF-4G4"/>
+                        <outlet property="fontSizeLabel" destination="BN7-Yf-hbv" id="EPc-lo-7Rh"/>
+                        <outlet property="imageControl" destination="VP5-7W-wRT" id="ZKa-5D-Rgo"/>
+                        <outlet property="plantImage" destination="Xgk-aR-Sed" id="Po9-Zu-VQQ"/>
+                        <outlet property="titleLabel" destination="wIR-VE-IHA" id="IKc-5h-Pfk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="92.410714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plants" width="320" height="319.5"/>
+    </resources>
+</document>
