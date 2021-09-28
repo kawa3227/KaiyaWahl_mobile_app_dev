@@ -42,3 +42,11 @@ class ViewController: UIViewController {
    
 }
 
+//question 1 what are your intentions answers relax, release, energy, thought
+// if user chooses relax change BG color to blue energy - yellow thought -purple release -orange
+//quesition 2 what sounds would you like to listen to answers: creek, ocean, wind
+//if user chooses creek play creek sounds
+//question 3 how long would you like to meditate for
+//if user says 3 minutes
+//set max to 3 mintues or 180 seconds and have time give an alert when it reaches the max 
+//each option for questions 1-2 will be their own button with their own actions 
