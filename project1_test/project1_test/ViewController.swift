@@ -24,18 +24,29 @@ class ViewController: UIViewController {
     var OutTimer = Timer()
     var TimerDisplayer = 0
     @objc func Action(){
-        
+        //TimerDisplayer = Int(minStepper.value * 60)
         TimerDisplayer += 1
         Label.text = String(TimerDisplayer)
-    }
-    func endTimer(){
         if TimerDisplayer == Int(minStepper.value * 60){
-            let alert = UIAlertController(title: "End", message: "Your meditation has ended", preferredStyle: UIAlertController.Style.alert)
+            audioPlayer.stop()
+           // Label.text = "Your meditation as ended"//replace wit alert
+            let alert = UIAlertController(title: "Warning", message: "You mediation as ended", preferredStyle: UIAlertController.Style.alert)
             let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
             alert.addAction(cancelAction)
+                        
+            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {action in
+                self.OutTimer.invalidate()
+                self.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                self.Label.text = "0"
+                
+                        })
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+            
         }
+
     }
-    
+
     @IBAction func choose_background(_ sender: UIButton) {
         if sender.tag == 4 {
             self.view.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
@@ -79,7 +90,7 @@ class ViewController: UIViewController {
         audioPlayer.numberOfLoops = -1
         audioPlayer.play()
         OutTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(Action), userInfo: nil, repeats: true)
-        endTimer()
+
     }
     
     override func viewDidLoad() {
