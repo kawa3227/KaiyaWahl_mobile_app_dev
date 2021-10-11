@@ -4,7 +4,10 @@
 //
 //  Created by Kaiya Wahl on 9/27/21.
 //
-
+//sources: https://www.youtube.com/watch?v=XR_rTofgcxU
+//https://www.youtube.com/watch?v=v9-xhPcxId4
+//https://developer.apple.com/documentation/technologies
+//mp3 downloads from https://www.epidemicsound.com/sound-effects/?tags=Fast&_us=adwords&_usx=11282646959_&gclid=Cj0KCQjwwY-LBhD6ARIsACvT72P-BJrU-Pj4hTEsJzk5sVU2Yces1QG8lF70ys-_aN1KlhrzHxsCsKYaAlkVEALw_wcB
 import UIKit
 import AVFoundation
 class ViewController: UIViewController {
